@@ -1,0 +1,364 @@
+.footer {
+  position: fixed;           /* makes it stay at bottom */
+  bottom: 0;                 /* aligns to bottom */
+  left: 0;
+  width: 100%;               /* spans entire width */
+  background-color: #1e1e2f; /* same dark theme as navbar */
+  color: #ffffff;            /* white text */
+  text-align: center;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Responsive text size for mobile */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+/* navbar css */
+/* ===== Navbar Container ===== */
+.Nav-ul {
+  background-color: #1e1e2f; /* Dark navy background */
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Unordered List Style ===== */
+.Nav-ul ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== List Item Style ===== */
+.Nav-ul li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===== Link Style ===== */
+.Nav-ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* ===== Hover Effect ===== */
+.Nav-ul li a:hover {
+  background-color: #4f46e5; /* Indigo highlight */
+  color: #ffffff;
+}
+
+/* ===== Active Link Style (Optional, if you use NavLink) ===== */
+.Nav-ul li a.active {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .Nav-ul ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+  
+
+
+
+
+
+/* Container styling */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #f4f7fb;
+  padding: 20px;
+}
+
+/* Heading */
+.signup-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Form */
+.signup-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.signup-form input {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Input hover/focus effect */
+.signup-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+/* Button */
+.signup-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover effect */
+.signup-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+/* product add */
+.add-product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background-color: #f4f7fb;
+  padding: 20px;
+}
+
+.add-product-container h1 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.add-product-container input {
+  width: 300px;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #8ec5ff;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.add-product-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.add-product-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 180px;
+}
+
+.add-product-container button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* product-List */
+.product-list-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.product-list-container h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.product-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  font-family: Arial, sans-serif;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #9fc5e8;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f5f9ff;
+  font-weight: bold;
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+  background-color: #e7f1ff;
+}
+
+h3 {
+  color: gray;
+}
+
+
+
+
+
+
+
+.product-list-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-box {
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f4f4f4;
+}
+
+.delete-btn,
+.update-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.update-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.update-btn:hover {
+  background-color: #2980b9;
+}
