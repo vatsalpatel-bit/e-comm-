@@ -13,7 +13,6 @@ const UpdateProduct = () => {
     if (params.id) {
       getProductDetails();
     }
-    // eslint-disable-next-line
   }, [params.id]);
 
   const getProductDetails = async () => {
@@ -33,7 +32,7 @@ const UpdateProduct = () => {
     });
     result = await result.json();
     if (result) {
-      navigate("/Add")
+      navigate("/Add");
     } else {
       alert("Product update failed");
     }

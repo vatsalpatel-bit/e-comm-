@@ -27,6 +27,7 @@ const ProductsList = () => {
       getProducts();
     } else {
       alert("Product not found");
+      
     }
   };
 

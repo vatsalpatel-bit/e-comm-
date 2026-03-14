@@ -11,23 +11,33 @@ const Login = () => {
     if (auth) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]); 
 
   const handlelogin = async () => {
-    let result = await fetch("http://localhost:5000/login", {
-      method: "post",
-      body: JSON.stringify({ email, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    try {
+      let result = await fetch("http://localhost:5000/login", {
+        method: "post",
+        body: JSON.stringify({ email, password }),
+        headers: { "Content-Type": "application/json" },
+      });
+      
 
-    result = await result.json();
-    console.warn(result);
+      if (!result.ok) {
+        throw new Error(`HTTP error! status: ${result.status}`);
+      }
 
-    if (result.name) {
-      localStorage.setItem("user", JSON.stringify(result));
-      navigate("/");
-    } else {
-      alert("Please enter correct details");
+      result = await result.json();
+      console.warn(result);
+
+      if (result.name) {
+        localStorage.setItem("user", JSON.stringify(result));
+        navigate("/Add");
+      } else {
+        alert("Please enter correct details");
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      alert("Login failed. Please check your connection and try again.");
     }
   };
 
@@ -46,12 +56,14 @@ const Login = () => {
           placeholder="Enter Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <input
           type="password"
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button type="submit">Login</button>
       </form>

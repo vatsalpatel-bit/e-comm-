@@ -362,3 +362,25 @@ h2 {
 .update-btn:hover {
   background-color: #2980b9;
 }
+
+
+
+
+
+
+.username {
+  display: flex;           /* puts h1 and input in one line */
+  align-items: center;     /* vertically centers them */
+  gap: 10px;               /* space between them */
+}
+
+/* hide the input box but keep it functional */
+.hidden-input {
+  border: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent; /* hides the blinking cursor */
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

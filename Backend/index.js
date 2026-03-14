@@ -120,6 +120,29 @@ app.get("/search/:key", async (req, resp) => {
   }
 });
 
+// ---get username ---
+app.get("/username", async (req, res) => {
+  try {
+    const userId = req.query.userId;
+    
+    if (!userId) {
+      return res.status(400).json({ error: "User ID required" });
+    }
+    
+    const user = await User.findById(userId).select("name -_id");
+    
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    
+    res.json({ username: user.name });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Error fetching username" });
+  }
+});
+
+
 // --- Start Server ---
 app.listen(5000, () => {
   console.log('✅ Server running on http://localhost:5000');

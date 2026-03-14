@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // <-- to go back to list
+import { useNavigate } from "react-router-dom"; 
 
 const AddProduct = () => {
   const [name, setName] = React.useState("");
@@ -30,13 +30,13 @@ const AddProduct = () => {
 
     if (result) {
       alert("Product added successfully!");
-      // ✅ Clear input fields
+      
       setName("");
       setPrice("");
       setCategory("");
       setCompany("");
-      // ✅ Redirect to product list
-      navigate("/");
+      
+      navigate("/Add");
     } else {
       alert("Failed to add product.");
     }
